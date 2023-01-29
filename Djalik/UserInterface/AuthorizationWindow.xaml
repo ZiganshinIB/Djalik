@@ -1,0 +1,40 @@
+﻿<Window x:Class="Djalik.AuthorizationWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Djalik"
+        mc:Ignorable="d"
+        Title="Авторизация - привет эпи-кам" Height="600" Width="800"
+        
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}">
+    
+    
+    <Grid Background="AliceBlue">
+        <Border MinWidth="400" Margin="15" Background="DarkGray" VerticalAlignment="Center" Padding="30" MaxWidth="550" CornerRadius="20">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="30" Color="LightGray" ShadowDepth="0"/>
+            </Border.Effect>
+            <StackPanel>
+                <TextBlock Text="Аворизация" FontSize="30" 
+                           FontWeight="Bold"  FontStyle="Italic" 
+                           Margin="0, 0, 0, 10" Foreground="Lavender"/>
+                
+                
+                <TextBox x:Name="login_Text" materialDesign:HintAssist.Hint="Ник" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+                <PasswordBox x:Name="pass_Text" materialDesign:HintAssist.Hint="Пароль" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}"/>
+                <Button x:Name="authButton"  Content="Войти" Click="authButton_Click" Margin="0 10" Cursor="Hand"/>
+                <Button x:Name="reg_Window_Button" Content="Зарегистрироваться" Click="reg_Window_Button_Click" Margin="0 10" Style="{StaticResource MaterialDesignFlatButton}" Cursor="Hand"/>
+                
+            </StackPanel>
+        </Border>
+
+    </Grid>
+</Window>

@@ -1,0 +1,38 @@
+﻿<Window x:Class="Djalik.Registration_Window"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Djalik"
+        mc:Ignorable="d"
+        Title="Регистрация" Height="600" Width="800"
+        
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}">
+    <Grid Background="Aquamarine">
+        <Border MinWidth="400" Margin="15" Background="White" VerticalAlignment="Center" Padding="30" MaxWidth="550" CornerRadius="20">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="30" Color="LightGray" ShadowDepth="0"/>
+            </Border.Effect>
+            <StackPanel>
+                <TextBlock Text="Регистрация" FontSize="30" 
+                           FontWeight="Bold"  FontStyle="Italic" 
+                           Margin="0, 0, 0, 10"/>
+                <TextBox x:Name="fistName_Text" materialDesign:HintAssist.Hint="Имя" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+                <TextBox x:Name="secondName_Text" materialDesign:HintAssist.Hint="Фамилия" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+                <TextBox x:Name="login_Text" materialDesign:HintAssist.Hint="Ник" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+                <PasswordBox x:Name="pass_Text" materialDesign:HintAssist.Hint="Пароль" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}"/>
+                <PasswordBox x:Name="pass2_Text" materialDesign:HintAssist.Hint="Повтори" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}"/>
+                <Button x:Name="regButton" Content="Зарегистрироваться" Click="regButton_Click" Margin="0 10" Cursor="Hand"/>
+                <Button x:Name="authButton"  Content="Войти" Click="authButton_Click" Margin="0 10" Style="{StaticResource MaterialDesignFlatButton}" Cursor="Hand"/>
+            </StackPanel>
+        </Border>
+
+    </Grid>
+</Window>
